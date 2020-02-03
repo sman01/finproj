@@ -1,4 +1,6 @@
 # finproj
-final year project
-http://help.sentiment140.com/for-students/ :: dataset for twitter analysis
-no readymade dataset for car reviews need to generate r use unsupervised
+final year project;
+http://help.sentiment140.com/for-students/ :: dataset for twitter analysis;
+no readymade dataset for car reviews need to generate r use unsupervised;
+pre.py scrapes the data of the car before launch;
+
