@@ -24,5 +24,6 @@ for u in URL:
             quote['stat']="wrong"
             quote['pont'] = ro.text
             quotes.append(quote)
-    with open("pro.json", "w") as writeJSON:
-        json.dump(quotes, writeJSON, ensure_ascii=False)
+    with open('pro.json', 'w', encoding='utf-8') as f:
+        json.dump(quotes, f, ensure_ascii=False, indent=4)
+print("done")

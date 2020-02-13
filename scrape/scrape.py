@@ -9,11 +9,9 @@ url = "https://www.cardekho.com/maruti/swift/user-reviews/"
 URL = []
 URL.append(url)
 
-for page in range(2,10):
+for page in range(2,21):
     r = url + str(page)
-    print(r)
     URL.append(r)
-print(URL)
 for u in URL:
     r = requests.get(u) 
     soup = BeautifulSoup(r.content, 'html5lib') 
@@ -25,5 +23,7 @@ for u in URL:
             quote['review'] = row.p.text
             quotes.append(quote)
 
-    with open("textbooks.json", "a") as writeJSON:
-        json.dump(quotes, writeJSON, ensure_ascii=False)
+        
+    with open('scrape.json', 'w', encoding='utf-8') as f:
+        json.dump(quotes, f, ensure_ascii=False, indent=4)
+print("done")

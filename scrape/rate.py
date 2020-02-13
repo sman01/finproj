@@ -19,5 +19,6 @@ for u in URL:
             quote['rating'] = row.span.text
             quotes.append(quote)
 
-    with open("stats.json", "a") as writeJSON:
-        json.dump(quotes, writeJSON, ensure_ascii=False)
+    with open('rate.json', 'w', encoding='utf-8') as f:
+        json.dump(quotes, f, ensure_ascii=False, indent=4)
+print("done")

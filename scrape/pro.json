@@ -1,1 +1,34 @@
-[{"stat": "right", "pont": "Prices of several variants overlap with that of the more premium and spacious Baleno  "}, {"stat": "right", "pont": "Ride - Stiff set ride not suitable for bad roads"}, {"stat": "right", "pont": "The quality of plastics inside the Swift's cabin feel hard and not premium enough"}, {"stat": "right", "pont": "Safety concerns. The India-spec (unlike the Euro/Japanese spec) scored poorly in the Global NCAP crash tests, receiving just 2 stars even with dual front airbags and ABS. The structure was found to be unstable"}, {"stat": "wrong", "pont": "Prices of several variants overlap with that of the more premium and spacious Baleno  "}, {"stat": "wrong", "pont": "Ride - Stiff set ride not suitable for bad roads"}, {"stat": "wrong", "pont": "The quality of plastics inside the Swift's cabin feel hard and not premium enough"}, {"stat": "wrong", "pont": "Safety concerns. The India-spec (unlike the Euro/Japanese spec) scored poorly in the Global NCAP crash tests, receiving just 2 stars even with dual front airbags and ABS. The structure was found to be unstable"}]
+[
+    {
+        "stat": "right",
+        "pont": "Prices of several variants overlap with that of the more premium and spacious Baleno  "
+    },
+    {
+        "stat": "right",
+        "pont": "Ride - Stiff set ride not suitable for bad roads"
+    },
+    {
+        "stat": "right",
+        "pont": "The quality of plastics inside the Swift's cabin feel hard and not premium enough"
+    },
+    {
+        "stat": "right",
+        "pont": "Safety concerns. The India-spec (unlike the Euro/Japanese spec) scored poorly in the Global NCAP crash tests, receiving just 2 stars even with dual front airbags and ABS. The structure was found to be unstable"
+    },
+    {
+        "stat": "wrong",
+        "pont": "Prices of several variants overlap with that of the more premium and spacious Baleno  "
+    },
+    {
+        "stat": "wrong",
+        "pont": "Ride - Stiff set ride not suitable for bad roads"
+    },
+    {
+        "stat": "wrong",
+        "pont": "The quality of plastics inside the Swift's cabin feel hard and not premium enough"
+    },
+    {
+        "stat": "wrong",
+        "pont": "Safety concerns. The India-spec (unlike the Euro/Japanese spec) scored poorly in the Global NCAP crash tests, receiving just 2 stars even with dual front airbags and ABS. The structure was found to be unstable"
+    }
+]

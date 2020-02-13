@@ -19,5 +19,6 @@ for u in URL:
             quotes.append(quote)
             print (quote)
 
-    with open("pre.json", "a") as writeJSON:
-        json.dump(quotes, writeJSON, ensure_ascii=False)
+    with open('pre.json', 'w', encoding='utf-8') as f:
+        json.dump(quotes, f, ensure_ascii=False, indent=4)
+print("done")
