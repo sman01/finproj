@@ -103,7 +103,7 @@ print(df.pos_tagged)
         
  
 
-
+'''
 def stem_list(row):
     stemming=PorterStemmer()
     my_list = row['Review1']
@@ -114,7 +114,7 @@ def stem_list(row):
 df['stemmed_words'] = df.apply(stem_list, axis=1)
 print("yoooooooooooo")
 print(df.stemmed_words)
-
+'''
 from nltk.stem import WordNetLemmatizer
 
 
@@ -125,7 +125,7 @@ import nltk
 def lema(row):
     lemming=WordNetLemmatizer()
   #  print("-----------------test-----------------")
-    my_list=row['stemmed_words']
+    my_list=row['Review1']
     my_pos=row['pos_tagged']
 
     lemming_list=[]
