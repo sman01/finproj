@@ -60,18 +60,26 @@ def remove_stops(row):
 
 df['Review1'] = df.apply(remove_stops, axis=1)
 
-#print(df.Review1)
-
-
-
-
+print(df.Review1)
 
 from nltk import pos_tag
 
 from nltk.corpus import wordnet
+def actpos(row):
+    a=pos_tag(row)
+    print (a)
+    tag = pos_tag([a[1]])[0][1][0].upper()
+    tag_dict = {"J": wordnet.ADJ,
+                "N": wordnet.NOUN,
+                "V": wordnet.VERB,
+                "R": wordnet.ADV}
+
+    return tag_dict.get(tag, wordnet.NOUN)
+
+
 def get_wordnet_pos(word):
     """Map POS tag to first character lemmatize() accepts"""
-    tag = nltk.pos_tag([word])[0][1][0].upper()
+    tag = pos_tag([word])[0][1][0].upper()
     tag_dict = {"J": wordnet.ADJ,
                 "N": wordnet.NOUN,
                 "V": wordnet.VERB,
@@ -113,7 +121,7 @@ def stem_list(row):
 
 df['stemmed_words'] = df.apply(stem_list, axis=1)
 print("yoooooooooooo")
-print(df.stemmed_words)
+#print(df.stemmed_words)
 
 from nltk.stem import WordNetLemmatizer
 
@@ -124,14 +132,11 @@ import nltk
    
 def lema(row):
     lemming=WordNetLemmatizer()
-  #  print("-----------------test-----------------")
-    my_list=row['stemmed_words']
+    #print("-----------------test-----------------")
+    my_list=row['Review1']
     my_pos=row['pos_tagged']
 
-    lemming_list=[]
-    for (a,b) in zip (my_list,my_pos):
-        lemming_list = lemming.lemmatize(a,b)
-
+    lemming_list=[lemming.lemmatize(w,p)for (w,p) in zip(my_list,my_pos)]
 
     #print (lemming_list)
     return (lemming_list)
@@ -154,7 +159,7 @@ print(df.lemmatized_words)
 
 
 def rejoin_words(row):
-    my_list = row['stem_meaningful']
+    my_list = row['lemmatized_words']
     joined_words = ( " ".join(my_list))
     return joined_words
 
@@ -165,7 +170,7 @@ df['processed'] = df.apply(rejoin_words, axis=1)
 del df['Review']
 del df['words']
 #del df['stemmed_words']
-del df['stem_meaningful']
+#del df['lemmatized_words']
 #del df['lemmed_words']
 
 
