@@ -24,6 +24,6 @@ for u in URL:
             quotes.append(quote)
 
         
-    with open('scrape.json', 'w', encoding='utf-8') as f:
+    with open('scrape1.json', 'w', encoding='utf-8') as f:
         json.dump(quotes, f, ensure_ascii=False, indent=4)
 print("done")

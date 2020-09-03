@@ -12,7 +12,7 @@ for u in URL:
     r = requests.get(u) 
     soup = BeautifulSoup(r.content, 'html5lib') 
     quotes=[] # a list to store quotes 
-    table = soup.find('div', attrs = {'class':'rightthings wrongthings'}) 
+    table = soup.find('div', attrs = {'class':'rightthings'}) 
     for row in table.findAll('li'): 
             quote = {}
             quote['stat']="right"
